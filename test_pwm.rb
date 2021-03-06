@@ -6,7 +6,7 @@ unless pi.connect
 end
 
 led=pi.gpio(4)
-pin.mode=PI_OUTPUT
+led.mode=PI_OUTPUT
 led.write 0
 pwm=led.pwm
 
