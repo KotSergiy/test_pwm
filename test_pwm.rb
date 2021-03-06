@@ -19,7 +19,7 @@ puts pwm.dutycycle
 
 i=128
 while true do
-  if button.read == 0 do
+  if button.read == 0
     i=(i+1)%256
   end
   pwm.dutycycle= i
