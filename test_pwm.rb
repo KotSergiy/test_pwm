@@ -15,14 +15,16 @@ button.mode=PI_INPUT
 button.pud=PI_PUD_UP
 button.glitch_filter(5000)
 
-puts (pwm.dutycycle & 0xFF)
+# puts (pwm.dutycycle & 0xFF)
+# по умолчанию dutycycle = 164
 
 i=128
 while true do
   if button.read == 0
     i=(i+1)%256
+    pwm.dutycycle= i
+    puts (i & 0xFF)
   end
-  pwm.dutycycle= i
   sleep 0.01
 end
 pi.stop
