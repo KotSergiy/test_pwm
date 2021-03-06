@@ -24,7 +24,7 @@ while true do
   if button.read == 0
     i=(i+1)%256
     pwm.dutycycle= i
-    print "\b\b\b"
+    print "\r   \r"
     print (i & 0xFF)
   end
   sleep 0.01
