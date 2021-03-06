@@ -15,7 +15,7 @@ button.mode=PI_INPUT
 button.pud=PI_PUD_UP
 button.glitch_filter(5000)
 
-puts pwm.dutycycle
+puts (pwm.dutycycle & 0xFFFFFFFF)
 
 i=128
 while true do
