@@ -19,11 +19,13 @@ button.glitch_filter(5000)
 # по умолчанию dutycycle = 164
 
 i=128
+pwm.dutycycle= i
 while true do
   if button.read == 0
     i=(i+1)%256
     pwm.dutycycle= i
-    puts (i & 0xFF)
+    print "/r"
+    print (i & 0xFF)
   end
   sleep 0.01
 end
